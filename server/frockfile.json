@@ -13,11 +13,11 @@
           }
         },
         {
-          "path": "*",
-          "methods": "any",
-          "handler": "frock-proxy",
+          "path": "/api/hello",
+          "methods": ["GET"],
+          "handler": "./plugins/hello.babel",
           "options": {
-            "url": "http://localhost:8052"
+            "message": "hello Devit!"
           }
         }
       ]
