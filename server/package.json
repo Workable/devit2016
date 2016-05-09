@@ -1,0 +1,8 @@
+{
+  "name": "devit2016",
+  "version": "1.0.0",
+  "devDependencies": {
+    "frock": "^1.1.1",
+    "frock-static": "^1.0.0"
+  }
+}
