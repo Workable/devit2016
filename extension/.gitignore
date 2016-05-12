@@ -31,3 +31,8 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# Build
+app/styles/main.css
+app/scripts/background_bundle.js
+app/scripts/content_bundle.js

@@ -1,0 +1,76 @@
+{
+  "name": "devit2016",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "clean": "gulp clean"
+  },
+  "dependencies": {
+    "jquery": "2.2.2",
+    "keymirror": "^0.1.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.1",
+    "redux": "^3.3.1",
+    "redux-logger": "^2.6.1",
+    "redux-notify": "0.1.1",
+    "redux-thunk": "^2.0.1"
+  },
+  "devDependencies": {
+    "aliasify": "^1.9.0",
+    "babel-cli": "6.8.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-es2015-destructuring": "6.8.0",
+    "babel-plugin-transform-object-rest-spread": "6.8.0",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.7.2",
+    "babelify": "7.2.0",
+    "browserify": "13.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-cache": "^0.4.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "run-sequence": "^1.1.5",
+    "vinyl-source-stream": "1.1.0",
+    "watchify": "3.7.0"
+  },
+  "aliasify": {
+    "aliases": {
+      "app": "./app",
+      "background": "./src/scripts/background",
+      "content": "./src/scripts/content",
+      "shared": "./src/scripts/shared"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Workable/devit2016.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Workable/devit2016/issues"
+  },
+  "contributors": [
+    {
+      "name": "Sokratis Vidros",
+      "email": "sokratis@workable.com"
+    },
+    {
+      "name": "Nikos Kostoulas",
+      "email": "kostoulas@workable.com"
+    }
+  ]
+}
