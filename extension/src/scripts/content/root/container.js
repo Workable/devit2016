@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {open, select} from '../actions';
+import {select} from '../actions';
 import Main from './component';
 
 function mapStateToProps(state = {}) {
