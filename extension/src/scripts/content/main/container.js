@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import select from '../actions';
-import Popover from './component';
+import {open, select} from '../actions';
+import Main from './component';
 
 function mapStateToProps(state = {}) {
   return {
@@ -12,8 +12,8 @@ function mapStateToProps(state = {}) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    select: (name) => dispatch(select(name))
+    select: name => dispatch(select(name))
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Popover);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
