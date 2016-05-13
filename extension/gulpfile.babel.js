@@ -3,6 +3,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserify      from 'browserify';
 import babelify        from 'babelify';
 import aliasify        from 'aliasify';
+import browserifyCSS   from 'browserify-css';
 import del             from 'del';
 import runSequence     from 'run-sequence';
 import path            from 'path';
@@ -21,7 +22,7 @@ function bundle(input, output) {
 
   const b = browserify({
     entries: [path.join(input.dir, input.base)],
-    transform: [babelify, aliasify],
+    transform: [babelify, aliasify, browserifyCSS],
     fullPaths: true
   });
 

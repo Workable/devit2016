@@ -1,16 +1,8 @@
 import React from 'react';
 
 export default ({name, description, death, death_info}) => {
-  const styles = {
-    position: 'fixed',
-    top: '0',
-    left: '50%',
-    width: '300px',
-    minHeight: '100px',
-    backgroundColor: 'red'
-  };
   return (
-    <div style={styles}>
+    <div className='spoiler'>
       <div>
         <h3>Name</h3>
         <p>{name}</p>
