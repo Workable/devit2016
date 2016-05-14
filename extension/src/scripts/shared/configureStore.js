@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 import notify from 'redux-notify';
-import chromeExtension from './middleware/chromeExtension';
+import chromeGofer from './reduxChromeGofer';
 
 export default function configureStore({
   middleware = [thunk],
@@ -13,10 +13,10 @@ export default function configureStore({
 } = {}) {
 
   if (events.length > 0) {
-    middleware.push(notify(events, { noReverse: true }));
+    middleware.push(notify(events, { noReverse: true   }));
   }
 
-  middleware.push(chromeExtension(api));
+  middleware.push(chromeGofer(api));
   middleware.push(require('redux-logger')({ level: 'info', collapsed: true }));
 
   const enhancer = compose(chromeEnhancer(api), applyMiddleware(...middleware));
