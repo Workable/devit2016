@@ -1,9 +1,9 @@
 import {fetchSpoiler} from './actions';
-import {SELECT_NAME} from 'shared/actionTypes';
+import {REQUEST_SPOILER} from 'shared/actionTypes';
 
 export default [
   {
-    catch: [SELECT_NAME],
+    catch: [REQUEST_SPOILER],
     dispatch: fetchSpoiler
   }
 ];

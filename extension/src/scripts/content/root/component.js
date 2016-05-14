@@ -15,7 +15,7 @@ export default React.createClass({
   onClick(e) {
     if (e.target && e.target.nodeName === 'LI') {
       const name = (e.target.textContent || '').trim();
-      this.props.select(name);
+      this.props.requestSpoiler(name);
     }
   },
 

@@ -1,8 +1,8 @@
-import {SELECT_NAME} from 'shared/actionTypes';
+import {REQUEST_SPOILER} from 'shared/actionTypes';
 
-export function select(name) {
+export function requestSpoiler(name) {
   return {
-    type: SELECT_NAME,
+    type: REQUEST_SPOILER,
     background: true,
     name
   };

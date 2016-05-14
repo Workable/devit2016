@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {select} from '../actions';
-import Main from './component';
+import {requestSpoiler} from '../actions';
+import Root from './component';
 
 function mapStateToProps(state = {}) {
   return {
@@ -12,8 +12,8 @@ function mapStateToProps(state = {}) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    select: name => dispatch(select(name))
+    requestSpoiler: name => dispatch(requestSpoiler(name))
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Root);
