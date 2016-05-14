@@ -1,9 +1,23 @@
 {
-  "name": "devit2016",
+  "name": "workable-devit2016",
   "version": "1.0.0",
+  "description": "Mock server for the Workable React extension",
+  "license": "MIT",
+  "keywords": "workable,react,chrome,extension",
+  "homepage": "https://github.com/Workable/devit2016",
   "scripts": {
     "start": "gulp && node dist/server.js"
   },
+  "contributors": [
+    {
+      "name": "Theodore Vorillas",
+      "email": "theodore@workable.com"
+    },
+    {
+      "name": "Angelos Karagkiozidis",
+      "email": "angelos@workable.com"
+    }
+  ],
   "devDependencies": {
     "babel-cli": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
