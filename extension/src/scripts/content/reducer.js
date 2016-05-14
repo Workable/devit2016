@@ -5,7 +5,7 @@ export default (state = {}, action) => {
     case PUSH_STATE:
       return Object.assign({}, state, action.payload);
     case REQUEST_SPOILER:
-      return Object.assign({}, state, { name: action.name });
+      return Object.assign({}, state, { name: action.name, spoiler: null });
     case RECEIVE_SPOILER:
       return Object.assign({}, state, { spoiler: action.spoiler });
     default:

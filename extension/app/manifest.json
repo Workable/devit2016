@@ -44,7 +44,7 @@
     }
   ],
   "web_accessible_resources": [
-    "images/*.png",
+    "images/*.gif",
     "styles/*.css"
   ]
 }
