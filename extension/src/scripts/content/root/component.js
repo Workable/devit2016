@@ -6,15 +6,15 @@ import styles from 'app/styles/main.css';
 export default React.createClass({
 
   componentDidMount() {
-    document.getElementById('characters').addEventListener('click', this.onClick);
+    document.addEventListener('click', this.onClick);
   },
 
   componentWillUnmount() {
-    document.getElementById('characters').removeEventListener('click', this.onClick);
+    document.removeEventListener('click', this.onClick);
   },
 
   onClick(e) {
-    if (e.target && e.target.nodeName === 'LI') {
+    if (e.target && e.target.className.toLowerCase() === 'character') {
       const name = (e.target.textContent || '').trim();
       this.props.requestSpoiler(name);
     }
