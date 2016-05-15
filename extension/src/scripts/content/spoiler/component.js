@@ -1,11 +1,12 @@
 import React from 'react';
 
-export default ({name, description, death, death_info}) => {
+export default ({name, description, death, death_info, image}) => {
   return (
     <div className='spoiler'>
       <section>
-        <img src="http://placekitten.com/100/100" />
-        <h4>Name</h4>
+        <h3>Name</h3>
+        <img src=`${image}` alt=""/>
+
         <p>{name}</p>
       </section>
       <section>
@@ -15,7 +16,7 @@ export default ({name, description, death, death_info}) => {
       <section>
         <h4>Death</h4>
         <p>
-          {death} 
+          {death}
           <br />
           {death_info}
         </p>
