@@ -1,14 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
 .root {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 0;
   width: 300px;
-  min-height: 100px;
-  background-color: lightseagreen;
+  background-color: #2E364B;
+  box-shadow: inset 10px 0 5px -5px rgba(0, 0, 0, 0.1);
+  color: #CDCCCA;
+  padding: 20px;
+}
+
+h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(236, 234, 232, 0.5);
 }
 
 .spoiler {
+  font-size: 16px;
 
+  section + section {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(236, 234, 232, 0.2);
+  }
 }
 
 .loader {
