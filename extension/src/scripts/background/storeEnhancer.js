@@ -7,40 +7,42 @@ export default function storeEnhancer(api) {
 
       const listener = (request, sender) => {
         store.dispatch({ ...request, tab: sender.tab });
-    }
+      }
 
-    api.onMessage(listener);
+      api.onMessage(listener);
 
-    api.onConnect(port => {
-      const tabID = port.sender.tab.id;
+      api.onConnect(port => {
+        const tabID = port.sender.tab.id;
 
-      store.ports[tabID] = port;
+        store.ports[tabID] = port;
 
-      console.log(`Connected with tab: ${tabID}`);
+        console.log(`Connected with tab: ${tabID}`);
 
-      let previouslySendState;
-      const sendState = () => {
-        if (previouslySendState !== store.getState()) {
-          port.postMessage({
-            type: PUSH_STATE,
-            payload: store.getState()
-          });
-          previouslySendState = store.getState();
-        }
-      };
+        let previouslySentState;
 
-      const unsubscribe = store.subscribe(sendState);
+        const sendState = () => {
+          const newState = store.getState();
+          if (previouslySentState !== newState) {
+            port.postMessage({
+              type: PUSH_STATE,
+              payload: newState
+            });
+            previouslySentState = newState;
+          }
+        };
 
-      port.onDisconnect.addListener(() => {
-        unsubscribe();
-        delete store.ports[tabID];
-        console.log(`Disconnected from tab: ${tabID}`);
+        const unsubscribe = store.subscribe(sendState);
+
+        port.onDisconnect.addListener(() => {
+          unsubscribe();
+          delete store.ports[tabID];
+          console.log(`Disconnected from tab: ${tabID}`);
+        });
+
+        sendState();
       });
 
-      sendState();
-    });
-
-    return store;
+      return store;
+    };
   };
-};
 };
