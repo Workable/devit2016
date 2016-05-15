@@ -3,40 +3,44 @@ import {PUSH_STATE} from 'shared/actionTypes';
 export default function storeEnhancer(api) {
   return (storeCreator) => {
     return (reducer, initialState) => {
-      const store = Object.assign(storeCreator(reducer, initialState), {ports: {}, api});
+      const store = Object.assign(storeCreator(reducer, initialState), { ports: {}, api });
 
       const listener = (request, sender) => {
         store.dispatch({ ...request, tab: sender.tab });
-      }
+    }
 
-      api.onMessage(listener);
+    api.onMessage(listener);
 
-      api.onConnect(port => {
-        const tabID = port.sender.tab.id;
+    api.onConnect(port => {
+      const tabID = port.sender.tab.id;
 
-        store.ports[tabID] = port;
+      store.ports[tabID] = port;
 
-        console.log(`Connected with tab: ${tabID}`);
+      console.log(`Connected with tab: ${tabID}`);
 
-        const sendState = () => {
+      let previouslySendState;
+      const sendState = () => {
+        if (previouslySendState !== store.getState()) {
           port.postMessage({
             type: PUSH_STATE,
             payload: store.getState()
           });
-        };
+          previouslySendState = store.getState();
+        }
+      };
 
-        const unsubscribe = store.subscribe(sendState);
+      const unsubscribe = store.subscribe(sendState);
 
-        port.onDisconnect.addListener(() => {
-          unsubscribe();
-          delete store.ports[tabID];
-          console.log(`Disconnected from tab: ${tabID}`);
-        });
-
-        sendState();
+      port.onDisconnect.addListener(() => {
+        unsubscribe();
+        delete store.ports[tabID];
+        console.log(`Disconnected from tab: ${tabID}`);
       });
 
-      return store;
-    };
+      sendState();
+    });
+
+    return store;
   };
+};
 };

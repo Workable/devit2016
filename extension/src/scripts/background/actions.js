@@ -9,9 +9,8 @@ function receiveSpoiler (tab, spoiler) {
   };
 }
 
-export function fetchSpoiler({tab}) {
+export function fetchSpoiler({tab, name}) {
   return (dispatch, getState) => {
-    const {name} = getState();
     return getSpoiler(name)
       .then(data => dispatch(receiveSpoiler(tab, data[0])));
   };
