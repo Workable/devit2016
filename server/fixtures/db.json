@@ -2,46 +2,56 @@
   "spoilers": [{
     "name": "Eddard Stark",
     "description": "Lord of Winterfell - Warden of the North - Hand of the King - Married to Catelyn (Tully) Stark",
+    "imageSuffix": "eddard-stark",
+    "image": "/imgs/ned.jpg",
     "death": "S01E09",
     "death_info" : "Beheaded by Ser Ilyn Payne at the order of Joffrey Baratheon"
   }, {
     "name": "Robb Stark",
     "description": "Son of Eddard and Catelyn Stark - Direwolf: Grey Wind",
+    "image": "/imgs/robb.jpg",
     "death": "S03E09",
     "death_info" :"Shot by a Frey crossbowman and then stabbed through the heart by Roose Bolton at the Red Wedding"
   }, {
     "name": "Tywin Lannister",
     "description": "Lord of Casterly Rock - Warden of the West",
     "death" : "S04E10",
+    "image": "/imgs/tywin.jpeg",
     "death_info": "Shot on the toilet by Tyrion with a crossbow"
   }, {
     "name": "Viserys Targaryen",
     "description": "The Beggar King - Son of Aerys II Targaryen \"The Mad King\"",
     "death" : "S01E06",
+    "image": "/imgs/viserys.jpeg",
     "death_info": "Khal Drogo pours molten gold on his head at Daenerys’ command"
   }, {
     "name": "Oberyn Martel",
     "description": "Prince of the House Martell",
+    "image": "/imgs/oberyn.jpg",
     "death":"S04E08",
     "death_info": "Skull crushed by the Mountain in a trial by combat"
   },{
     "name": "Khal Drogo",
     "description": "Leader of the Dothraki people - Dothraki Warlord - Married to Daenerys Targaryen",
+    "image": "/imgs/khal.jpg",
     "death":"S01E10",
     "death_info" : "Smothered by Daenerys Targaryen in a mercy killing after a spell by Mirri Maz Duur leaves him in a catatonic state"
   }, {
     "name": "Stannis Baratheon",
     "description": "Lord of Dragonstone - Master of Ships - Brother of Robert Baratheon",
+    "image": "/imgs/stannis.jpeg",
     "death":"S05E10",
     "death_info": "Executed by Brienne of Tarth"
   }, {
     "name": "Catelyn Stark",
     "description": "Married to Eddard Stark - Daughter of Hoster Tully",
+    "image": "/imgs/catelyn.jpg",
     "death": "S03E09",
     "death_info" :"Throat slit by Black Walder Rivers at the Red Wedding"
   }, {
     "name": "King Robert Baratheon",
     "description": "The first of his name - Lord of the Seven Kingdoms",
+    "image": "/imgs/robert.jpeg",
     "death": "S01E07",
     "death_info" : "Mortally wounded by a wild boar after drinking wine given to him by Lancel Lannister at Cersei Lannister’s command"
   }]
