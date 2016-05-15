@@ -6,9 +6,7 @@ var _jsonServer2 = _interopRequireDefault(_jsonServer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FIXTURES_PATH = './fixtures/db.json';
-
-// Endpoints
+var FIXTURES_PATH = './fixtures/db.json'; // Endpoints
 // GET /
 // GET /spoilers?name_like=name
 
