@@ -4,7 +4,6 @@ import {RECEIVE_SPOILER} from 'shared/actionTypes';
 function receiveSpoiler (tab, spoiler) {
   return {
     type: RECEIVE_SPOILER,
-    foreground: true,
     tab,
     spoiler
   };
