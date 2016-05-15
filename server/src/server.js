@@ -13,7 +13,7 @@ server.use(middlewares);
 
 // Add a fake delay in responses, we want to show some loaders
 server.use(function (req, res, next) {
-  var delay = Math.round(Math.random() * 1000 + 200);
+  var delay = 0;
   setTimeout(function () {
     next()
   }, delay);
