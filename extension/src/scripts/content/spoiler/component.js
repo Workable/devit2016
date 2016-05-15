@@ -6,16 +6,15 @@ export default ({name, description, death, death_info, image}) => {
       <section>
         <img src={image} width="100" height="100" alt={name}/>
         <h3>Name</h3>
+        <p>{name}</p>
       </section>
       <section>
         <h4>Description</h4>
         <p>{description}</p>
       </section>
       <section>
-        <h4>Death</h4>
+        <h4>Death ({death})</h4>
         <p>
-          {death}
-          <br />
           {death_info}
         </p>
       </section>
