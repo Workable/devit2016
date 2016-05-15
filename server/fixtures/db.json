@@ -16,16 +16,16 @@
     "name": "Tywin Lannister",
     "description": "Lord of Casterly Rock - Warden of the West",
     "death" : "S04E10",
-    "image": "/imgs/tywin.jpeg",
+    "image": "/imgs/tywin.jpg",
     "death_info": "Shot on the toilet by Tyrion with a crossbow"
   }, {
     "name": "Viserys Targaryen",
     "description": "The Beggar King - Son of Aerys II Targaryen \"The Mad King\"",
     "death" : "S01E06",
-    "image": "/imgs/viserys.jpeg",
+    "image": "/imgs/viserys.jpg",
     "death_info": "Khal Drogo pours molten gold on his head at Daenerys’ command"
   }, {
-    "name": "Oberyn Martel",
+    "name": "Oberyn Martell",
     "description": "Prince of the House Martell",
     "image": "/imgs/oberyn.jpg",
     "death":"S04E08",
@@ -39,7 +39,7 @@
   }, {
     "name": "Stannis Baratheon",
     "description": "Lord of Dragonstone - Master of Ships - Brother of Robert Baratheon",
-    "image": "/imgs/stannis.jpeg",
+    "image": "/imgs/stannis.jpg",
     "death":"S05E10",
     "death_info": "Executed by Brienne of Tarth"
   }, {
@@ -51,7 +51,7 @@
   }, {
     "name": "King Robert Baratheon",
     "description": "The first of his name - Lord of the Seven Kingdoms",
-    "image": "/imgs/robert.jpeg",
+    "image": "/imgs/robert.jpg",
     "death": "S01E07",
     "death_info" : "Mortally wounded by a wild boar after drinking wine given to him by Lancel Lannister at Cersei Lannister’s command"
   }]
