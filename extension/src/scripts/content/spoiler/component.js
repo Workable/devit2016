@@ -3,18 +3,23 @@ import React from 'react';
 export default ({name, description, death, death_info}) => {
   return (
     <div className='spoiler'>
-      <div>
-        <h3>Name</h3>
+      <section>
+        <img src="http://placekitten.com/100/100" />
+        <h4>Name</h4>
         <p>{name}</p>
-      </div>
-      <div>
-        <h3>Description</h3>
+      </section>
+      <section>
+        <h4>Description</h4>
         <p>{description}</p>
-      </div>
-      <div>
-        <h3>Death</h3>
-        <p>{`(${death}) ${death_info}`}</p>
-      </div>
+      </section>
+      <section>
+        <h4>Death</h4>
+        <p>
+          {death} 
+          <br />
+          {death_info}
+        </p>
+      </section>
     </div>
   );
 }
