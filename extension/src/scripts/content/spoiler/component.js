@@ -4,9 +4,8 @@ export default ({name, description, death, death_info, image}) => {
   return (
     <div className='spoiler'>
       <section>
+        <img src={image} width="100" height="100" alt="#{name}" />
         <h3>Name</h3>
-        <img src={image} alt=""/>
-
         <p>{name}</p>
       </section>
       <section>
@@ -14,12 +13,8 @@ export default ({name, description, death, death_info, image}) => {
         <p>{description}</p>
       </section>
       <section>
-        <h4>Death</h4>
-        <p>
-          {death}
-          <br />
-          {death_info}
-        </p>
+        <h4>Death ({death})</h4>
+        <p>{death_info}</p>
       </section>
     </div>
   );
