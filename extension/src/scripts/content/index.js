@@ -7,17 +7,16 @@ import configureStore from 'shared/configureStore';
 import reducer from './reducer';
 import api from './api';
 import {default as chromeEnhancer} from './storeEnhancer';
-import {buildDOMContainer} from './dom';
+import {buildShadowDOMContainer} from './dom';
+import RootContainer from './root/container';
 
 let store = configureStore({ reducer, api, chromeEnhancer });
 
 render(
   <Provider store={store}>
-    <div>
-      Content goes here...
-    </div>
+    <RootContainer/>
   </Provider>,
-  buildDOMContainer()
+  buildShadowDOMContainer('spoiled-container')
 );
 
 console.log('Welcome from content script!');

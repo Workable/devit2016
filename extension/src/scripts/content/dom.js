@@ -5,4 +5,8 @@ function buildDOMContainer(id = 'container') {
   return host;
 }
 
-export default { buildDOMContainer };
+function buildShadowDOMContainer(id) {
+  return buildDOMContainer(id).createShadowRoot()
+}
+
+export default { buildDOMContainer, buildShadowDOMContainer };
