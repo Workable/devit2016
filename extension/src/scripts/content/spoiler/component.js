@@ -5,7 +5,7 @@ export default ({name, description, death, death_info, image}) => {
     <div className='spoiler'>
       <section>
         <img src={image} width="100" height="100" alt={name}/>
-        <h3>Name</h3>
+        <h4>Name</h4>
         <p>{name}</p>
       </section>
       <section>
