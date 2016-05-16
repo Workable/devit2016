@@ -1,5 +1,8 @@
-# Workable Devit2016
-A Workable Chrome Extension in React &amp; Redux. Spoiler API server included.
+# A Workable Chrome Extension
+
+This is Workable's workshop for the Devit conference 2016: A simple Chrome extension that fetches spoilers for Game of Thrones characters and is built using React & Redux. 
+
+The spoiler API is also included in the project.
 
 ## Install extension
 ```
@@ -9,7 +12,7 @@ $ gulp
 ```
 The gulp command will build the extension code and place it in the `app/` directory. 
 
-After that, visit `chrome://extensions`, select `Load unpacked extensions` and pick the project's `app/` directory.
+After that, on `chrome://extensions` select `Load unpacked extensions` and pick the project's `app/` directory.
 
 ## Start server
 ```
