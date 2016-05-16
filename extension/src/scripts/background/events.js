@@ -1,8 +1,9 @@
+import {fetchSpoiler} from './actions';
+import {REQUEST_SPOILER} from 'shared/actionTypes';
+
 export default [
-  // EXAMPLE:
-  //
-  // {
-  //   catch: [ACTION_NAME],
-  //   dispatch: functionToBeInvoked with action as 1st parameter
-  // }
+  {
+    catch: [REQUEST_SPOILER],
+    dispatch: fetchSpoiler
+  }
 ];

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Root from './component';
+import {requestSpoiler} from '../actions';
 
 function mapStateToProps(state = {}) {
   return {
@@ -11,6 +12,7 @@ function mapStateToProps(state = {}) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    requestSpoiler: name => dispatch(requestSpoiler(name))
   };
 }
 
